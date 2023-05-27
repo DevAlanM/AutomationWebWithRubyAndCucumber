@@ -2,9 +2,9 @@ name: My Automation Web
 
 on:
     push:
-      branches: [ "main" ]
+      branches: [ "master" ]
     pull_request:
-      branches: [ "main" ]
+      branches: [ "master" ]
   
     #executar Manualmente na aba Action
     workflow_dispatch:
