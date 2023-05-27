@@ -1,0 +1,45 @@
+name: My Automation Web
+
+on:
+    push:
+      branches: [ "main" ]
+    pull_request:
+      branches: [ "main" ]
+  
+    #executar Manualmente na aba Action
+    workflow_dispatch:
+  
+permissions:
+    contents: read
+  
+jobs:
+    build:
+      runs-on: ubuntu-latest
+  
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+  
+        - name: Set up Ruby
+          uses: ruby/setup-ruby@v1
+          with:
+            ruby-version: '3.1.2' #altere para a versão do ruby que está usando
+  
+        - name: Install dependencies
+          run: |
+            gem install bundler
+            bundle install
+          env:
+            CI: true
+  
+         # Excecução sos testes no navegador web sem interface chrome_headless
+        - name: Step 3 Execute test 
+          run:
+            bundle exec cucumber -p ci          
+  
+       # Grava o relatório do resultado do teste
+        - name: Step 4 Archive production artifacts 
+          uses: actions/upload-artifact@v3
+          with: 
+            name: reports
+            path: ./reports/report.html   
