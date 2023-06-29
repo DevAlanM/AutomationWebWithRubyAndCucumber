@@ -1,26 +1,42 @@
 class Home < SitePrism::Page
-    element :btn_sobre_nos, 'a[href="/#sobre-nos"]'
-    element :btn_depoimentos, 'a[href="/#depoimentos"]'
-    element :btn_parceiros, 'a[href="/#parceiros"]'
-    element :btn_fale_conosco, 'a[href="/#faleConosco"]'
-  
-    def click_about_us_nav
-        btn_sobre_nos.click
-    end
-  
-    def click_contact_us_nav
-      btn_fale_conosco.click
-    end
-  
-    def click_depositions_nav
-      btn_depoimentos.click
-    end
-  
-    def click_partners_nav
-      btn_parceiros.click
-    end
-  
-    # def validate_page(url)
-    #   expect(page).to have_current_path(url, url: true)
-    # end
+
+  element :sob, :xpath, "/html/body/div/div/div/header/div/ul/li[1]/a"
+  element :depo, :xpath, "/html/body/div/div/div/header/div/ul/li[2]/a"
+  element :parc, :xpath, "/html/body/div/div/div/header/div/ul/li[3]/a"
+  element :fale, :xpath, "/html/body/div/div/div/header/div/ul/li[4]/a"
+
+  def clique_sobrenos
+    sob.click
+  end
+
+  def clique_depoimentos
+    depo.click
+  end
+
+  def clique_parceiros 
+    parc.click
+  end
+
+  def clique_fale_conosco 
+    fale.click
+  end
+
+  # def validate_test(sessao)
+  #     sleep 2
+  #     if sessao == "Sobre nós"
+  #         find('h3',text:'Sobre nós').hover
+  #     end       
+      
+  #     if sessao == "Depoimentos"
+  #         find('h3',text:'O Qa.Coders é feito para os alunos').hover
+  #     end 
+
+  #     if sessao == "Parceiros"
+  #         find('h3',text:'Parceiros').hover
+  #     end     
+      
+  #     if sessao == "Fale Conosco"
+  #         find('h3',text:'Fale Conosco').hover
+  #     end    
+  # end
 end

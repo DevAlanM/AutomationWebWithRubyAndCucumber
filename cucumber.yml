@@ -1,4 +1,5 @@
-default: -p pretty --publish-quiet -p html -p prod -p chrome
+default: -p pretty --publish-quiet -p html -p dev -p chrome
+ci: -p pretty --publish-quiet -p html -p dev -p chrome_headless #linha para execução no Ci do github
 
 pretty: --format pretty
 dev: ENVIRONMENT=dev

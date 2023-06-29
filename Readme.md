@@ -11,8 +11,7 @@ Projeto de Automação Web com Ruby, Cucumber, Webdriver, Capybara
 <br>
 
 ### **Baixar o projeto do repositório:**
-https://github.com/DevAlanM/AutomationWebWithRubyAndCucumber
- 
+https://github.com/DevAlanM/AutomationWithRubyAndCucumber 
 
 ### Para instalar as dependências do projeto utilizar o comando:
     bundle install

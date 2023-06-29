@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'capybara'
 #Permite que meu codigo interaja com o navegador
 gem 'chromedriver-helper'
-# Permite escrevermos numa linguagem ubica: uma linguagem que nos permite escrever em "portugues"
+# Permite escrevermos em uma linguagem ubica: uma linguagem que nos permite escrever em "portugues"
 # em vez de codigo/ seria tipo uma tradução de 3pessoas que não falam nada com nada sobre aquele
 # conteúdo possam ser entendidos através do Gerkin. 
 gem 'cucumber'
