@@ -1,24 +1,24 @@
 class Home < SitePrism::Page
 
-  element :sob, :xpath, "/html/body/div/div/div/header/div/ul/li[1]/a"
-  element :depo, :xpath, "/html/body/div/div/div/header/div/ul/li[2]/a"
-  element :parc, :xpath, "/html/body/div/div/div/header/div/ul/li[3]/a"
-  element :fale, :xpath, "/html/body/div/div/div/header/div/ul/li[4]/a"
+  element :sobrenos, :xpath, "/html/body/div/div/div/header/div/ul/li[1]/a"
+  element :depoimentos, :xpath, "/html/body/div/div/div/header/div/ul/li[2]/a"
+  element :parceiros, :xpath, "/html/body/div/div/div/header/div/ul/li[3]/a"
+  element :faleconosco, :xpath, "/html/body/div/div/div/header/div/ul/li[4]/a"
 
   def clique_sobrenos
-    sob.click
+    sobrenos.click
   end
 
   def clique_depoimentos
-    depo.click
+    depoimentos.click
   end
 
   def clique_parceiros 
-    parc.click
+    parceiros.click
   end
 
   def clique_fale_conosco 
-    fale.click
+    faleconosco.click
   end
 
   # def validate_test(sessao)
